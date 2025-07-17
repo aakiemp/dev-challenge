@@ -14,7 +14,7 @@ function calculateAverage(nums) {
   const avg = total / nums.length;
 
   // Subtle typo here—this function doesn't exist:
-  console.lgo(`Average is: ${avg}`);
+  console.log(`Average is: ${avg}`);
 
   return avg;
 }
