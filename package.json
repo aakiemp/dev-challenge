@@ -1,0 +1,27 @@
+{
+  "name": "dev-challenge",
+  "version": "1.0.0",
+  "description": "Welcome to your technical assessment. This project includes intentional technical SEO and development issues. Identify and fix them using best practices.",
+  "main": "scripts.js",
+  "scripts": {
+    "build-css": "tailwindcss -i ./styles.css -o ./dist/styles.css --watch",
+    "build": "tailwindcss -i ./styles.css -o ./dist/styles.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgdemois/dev-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jgdemois/dev-challenge/issues"
+  },
+  "homepage": "https://github.com/jgdemois/dev-challenge#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.16"
+  }
+}
