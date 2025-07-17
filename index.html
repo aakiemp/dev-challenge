@@ -2,33 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Test Page</title>
+  <title>Technical Assessment Project - Demo Site</title>
+  <meta name="description" content="A demonstration website showcasing modern web development practices with Tailwind CSS, proper SEO, and accessibility features." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Technical Assessment" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Technical Assessment Project - Demo Site" />
+  <meta property="og:description" content="A demonstration website showcasing modern web development practices with Tailwind CSS, proper SEO, and accessibility features." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Technical Assessment Project - Demo Site" />
+  <meta name="twitter:description" content="A demonstration website showcasing modern web development practices with Tailwind CSS, proper SEO, and accessibility features." />
 
-  <!-- Tailwind CDN (candidate must replace with compiled build) -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Compiled Tailwind CSS -->
+  <link rel="stylesheet" href="dist/styles.css" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- Broken Structured Data -->
+  <!-- Fixed Structured Data -->
   <script type="application/ld+json">
     {
-      "@context": "http://schema.org",
+      "@context": "https://schema.org",
       "@type": "WebSite",
-      "naem": "Example",
+      "name": "Technical Assessment Demo",
       "url": "https://example.com",
-      "invalidProperty": "XYZ"
+      "description": "A demonstration website showcasing modern web development practices"
     }
   </script>
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans">
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50">Skip to main content</a>
 
-  <header class="p-5 bg-blu-500 text-white">
+  <header class="p-5 bg-blue-500 text-white" role="banner">
     <h1 class="text-xl">My Test Page</h1>
   </header>
 
-  <main class="p-5">
+  <main id="main-content" class="p-5" role="main">
     <section class="mb-4">
       <h2 class="text-lg font-bold">Welcome!</h2>
       <p>This is a sample project with intentional issues.</p>
@@ -36,12 +48,12 @@
 
     <img src="images/hero.jpg" alt="Hero image" class="max-w-full h-auto" loading="lazy" />
 
-    <button onclick="calculateAverage(10, 20, 30);" class="px-4 py-2 bg-green-500 text-white rounded">
-      Click me
+    <button onclick="calculateAverage([10, 20, 30]);" class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50" aria-label="Calculate average of sample numbers">
+      Calculate Average
     </button>
   </main>
 
-  <footer class="p-5 bg-gray-800 text-white">
+  <footer class="p-5 bg-gray-800 text-white" role="contentinfo">
     <p>&copy; 2024</p>
   </footer>
 
